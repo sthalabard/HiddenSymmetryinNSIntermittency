@@ -47,7 +47,7 @@ RESCALING='DV_rand'
 
 LAMBDA=1/4
 #Sets the observing rescaled scale of Eq.(6.5)
-#Can be  1/32,1/16, 1/8,1/4,1/2,1,2,4,8,16,32 for the settings (i),(ii),(iii) of the rescaling parameter
+#Can be  1/4,1/2,2,4 for the settings (i),(ii),(iii) of the rescaling parameter
 #should be 1 for the RESCALING setting 'kolmogorov'
 
 USE_JACOBIAN=False
@@ -73,8 +73,8 @@ cosmetics.pdfcutoff=5e-7
 #1e-6 for kolmogorov RESCALING
 
 cosmetics.binslin=None#128 #None
-# If integer value, smooths the PDF in the lin representation bases on percentiles; Useful especially for LAMBDA>1
-# eg cosmetics.binslin=10 the represented PDF in the main panel has 10 bins determined by the 10 deciles of the PDF 
+# If integer value, smooths the PDF in the lin representation based on percentiles; useful especially for LAMBDA>1.
+# eg cosmetics.binslin=10 the represented PDF in the main panel has 10 bins determined by the 10 deciles of the PDF.
 #If None, does not smooth the pdf in the main panel
 
 #%%

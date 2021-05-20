@@ -1,5 +1,5 @@
 # HiddenSymmetryinNSIntermittency
-Source code for the eponymous arXiv submission by Mailybaev and Thalabard
+Source code and Data for the  arXiv submission 
 
 **Hidden symmetry in the Navier-Stokes intermittency**
 by Mailybaev and Thalabard,
@@ -13,13 +13,13 @@ with current identifiers
 
 
 The repository contains data and minimal python code to 
- generate figure 1,2 and 4 of the paper, as well as the other figures mentionned but not shown in the paper.
+generate figure 1,2 and 4 of the paper, as well as the other figures mentionned but not shown in the paper.
 
 The data is contained in the subfolders 
-512, 4096 in the form of .dill files, Python pickling format, containing all relevant PDF.
+512 & 4096 in the form of .dill files, ie, Python pickling format, and contains all relevant PDF.
 The script Dill2mat.py  converts from dill to Matlab .mat format.
 
-Data is analysed with the python scripts:
+Data is analysed with the Python scripts:
 
 - 512_minimal.py for figures 1 and 2
 calling the subscripts
@@ -42,8 +42,9 @@ The scripts  run on python 3.8 with anaconda 3 distribution under Spyder 4.1.5 e
 
 ***
 *Observations* 
-- Currently choices of Lambda for the 4096  reduce to 1/2 2, corresponding to reported Figure 4 in the submission, unlike what is written in the 4096_minimal.py file.
-Full data is available on request.
+- To reproduce Fig 4, one needs to set LAMBDA= 1/2and  2 without weights nor CENTERING in the file 4096_minimal.py.
+We also include the data for Lambda =1/4 and 4.
+The case without the weights mentionned but not shown at the end of Section 6 is obtained by setting USE_JACOBIAN=False.
 
 @author: Simon Thalabard simon.thalabard@ens-lyon.org
 ***
