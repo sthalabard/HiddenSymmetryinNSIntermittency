@@ -5,9 +5,10 @@ Source code for the eponymous arXiv submission by Mailybaev and Thalabard
 by Mailybaev and Thalabard,
 
 with current identifiers
-    - Philosophical Transactions A RSTA-2021-0098
+
+- Philosophical Transactions A RSTA-2021-0098
     
-    -ArXiV https://arxiv.org/submit/3752236
+- ArXiV https://arxiv.org/submit/3752236
 ***
 
 
@@ -41,8 +42,8 @@ The scripts  run on python 3.8 with anaconda 3 distribution under Spyder 4.1.5 e
 
 ***
 *Observations* 
-- Currently choices of Lambda for the 4096  reduce to 1/2 2, corresponding to reported Figure 4 in the submission.
-- Data for Fig 2 is unavailable on the hub for now
+- Currently choices of Lambda for the 4096  reduce to 1/2 2, corresponding to reported Figure 4 in the submission, unlike what is written in the 4096_minimal.py file.
+Full data is available on request.
 
 @author: Simon Thalabard simon.thalabard@ens-lyon.org
 ***
