@@ -1,8 +1,8 @@
-# HiddenSymmetryinNSIntermittency
+# Hidden Symmetry in NS Intermittency
 Source code and Data for the  arXiv submission 
 
-**Hidden symmetry in the Navier-Stokes intermittency**
-by Mailybaev and Thalabard,
+**Hidden symmetry in the Navier-Stokes intermittency**,
+*by Mailybaev and Thalabard*,
 
 with current identifiers
 
