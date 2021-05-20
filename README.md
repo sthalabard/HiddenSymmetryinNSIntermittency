@@ -44,9 +44,14 @@ The scripts  run on python 3.8 with anaconda 3 distribution under Spyder 4.1.5 e
 
 ***
 *Observations* 
+
 - To reproduce Fig 4, please set LAMBDA= 1/2 and  2, USE_JACOBIAN=True, and  CENTERING = False in the file 4096_minimal.py.
-We also include the data for Lambda =1/4 and 4.
-The case without the weights mentionned but not shown at the end of Section 6 is obtained by setting USE_JACOBIAN=False.
+
+- We also include the data for Lambda =1/4 and 4.
+
+- The case without the weights mentionned but not shown at the end of Section 6 is obtained by setting USE_JACOBIAN=False.
+
+- Use Lambda=1, RESCALING='kolmogorov' to compare collapse with usual PDF of parallel increments.
 
 @author: Simon Thalabard simon.thalabard@ens-lyon.org
 ***
