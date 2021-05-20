@@ -23,6 +23,7 @@ Data is analysed with the Python scripts:
 
 - 512_minimal.py for figures 1 and 2
 calling the subscripts
+
 > init_python.py
 
 > 512_plotPDF_K62.py
@@ -31,6 +32,7 @@ calling the subscripts
 
 - 4096_minimal.py for figures 4
 calling the subscripts
+
 >  init_python.py
 
 > 512_plotPDF_K62.py
