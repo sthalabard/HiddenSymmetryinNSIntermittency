@@ -31,10 +31,13 @@ calling the subscripts
 > 512_plotPDF_K62.py
 > 512_plotPDF_multipliers.py
 
-- Observation : Currently choices of Lambda for the 4096  reduce to 1/2 2
-
-
 The scripts  run on python 3.8 with anaconda 3 distribution under Spyder 4.1.5 environment
+
+
+***
+*Observation* 
+- Currently choices of Lambda for the 4096  reduce to 1/2 2; only the 'DV_rand'  corresponing to choice (ii) in Eq (6.5).
+- Data for Fig 2 is unavailale for now
 
 
 @author: Simon Thalabard simon.thalabard@ens-lyon.org
