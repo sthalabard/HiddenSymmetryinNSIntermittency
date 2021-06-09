@@ -27,6 +27,8 @@ for i in np.arange(len(out.R0s)-1,-1,-1):
     j=i+shiftLAMBDA
     if j<0 or j>len(out.R1s)-1:continue
     r1, r1_eta=out.R1s[j], out.R1s[j]*out.param.dx/out.param.eta
+    print(i,r1_eta)
+    r0_eta= out.R0s[i]*out.param.dx/out.param.eta
     if r1_eta<INERTIALRANGE[0]:continue
     if r1_eta>INERTIALRANGE[1]:continue
 
@@ -40,7 +42,7 @@ for i in np.arange(len(out.R0s)-1,-1,-1):
     tweaks.xshift.append(xshift)
     tweaks.r1.append(r1_eta)
 
-    #Scaling is determing from position of maximum
+    #Scaling is determined from position of maximum
     tmp=scp.interpolate.interp1d(bs-xshift,ps)
     scale=1/(tmp(0)*pi)
     tweaks.scale.append(scale)
@@ -61,11 +63,6 @@ for ik,key in enumerate(tweaks.__dict__.keys()):
 #%INDICATIVE FITs
 xshiftmean=(tweaks.xshift/tweaks.scale).mean()
 print(xshiftmean)
-#if CENTERING: xshiftmean=0
-#if LAMBDA==4:
-#    xshiftmean=0.5
-#if LAMBDA==16:
-#    xshiftmean=0.23
 
 for ax in axs:
     x=np.linspace(-512,512,32*512)

@@ -39,18 +39,18 @@ param.lam=param.rms**3/param.epsilon
 param.Tlam=param.lam/param.rms
 
 #%% Parameter for the hidden PDF of Figure 4
-RESCALING='DV_rand'
+RESCALING='DV3_ABS'
 #Sets the functionnal A of Eq. (2.3)
 #The choices described in Eq.(6.6) are obtained by setting the rescaling to 
 #(i) 'DV2' (ii)'DV_rand' (iii) 'DV3_ABS' 
 # The setting  'kolmogorov' is also allowed, formally corresponding to the mean-field choice A_\ell = \ell^{1/3}
 
-LAMBDA=1/4
+LAMBDA=4
 #Sets the observing rescaled scale of Eq.(6.5)
 #Can be  1/4,1/2,2,4 for the settings (i),(ii),(iii) of the rescaling parameter
 #should be 1 for the RESCALING setting 'kolmogorov'
 
-USE_JACOBIAN=False
+USE_JACOBIAN=True
 #Sets whether the jacobian of Eq.(6.5) is included or not 
 
 CENTERING=False
@@ -64,7 +64,7 @@ cosmetics=dic2struc()
 cosmetics.coolR=lambda u: cm.cubehelix(np.log2(u)/np.log2(8192))
 cosmetics.lw=lambda r1:6-np.log2(512/r1)
 
-cosmetics.pdfcutoff=5e-7 
+cosmetics.pdfcutoff=5e-9
 #sets minimal pdf value to smooth from in order to filter noisy data the in semilogy inset
 #nice values are 
 #5e-7 for DV2 RESCALING
@@ -80,7 +80,13 @@ cosmetics.binslin=None#128 #None
 #%%
 exec(open('4096_plotPDF.py').read())
 
-#%%
+#%
+if USE_JACOBIAN:
+    name='%s_%0.2f_hidden.png' %(RESCALING,LAMBDA,)
+else:
+    name='%s_%0.2f_uniform.png' %(RESCALING,LAMBDA,)
+fig.savefig(join('Figs',name))
+#%% IF NEEDED
 #Adjust display in the main panel
 ax=axs[0]
 ax.set_xlim(-3,3)

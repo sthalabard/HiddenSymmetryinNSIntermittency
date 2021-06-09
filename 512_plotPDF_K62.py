@@ -30,7 +30,7 @@ for i,r in enumerate(out.R0s):
     lw=cosmetics.lw(r)
 
     if i%2==1: continue
-    dec=2**((n0-1-i))
+    dec=2**((len(out.R0s)-1-i))
     ps,bs=smooth_pdf(out.pdfs[i,:],out.bins,logmin=-7,nbins=32)
 
     ix=np.flatnonzero(ps>1e-8)
@@ -51,7 +51,7 @@ ax.set_xlim(-3,3)
 ax.set_yticks([0,0.2,0.4])
 ax.set_ylim(0,0.6)
 ax.set_xlim(-2,2)
-ax.set_xlabel('$\\delta u_\\parallel/S_2^{1/2} $')
+ax.set_xlabel('$\\Delta u_\\parallel/S_2^{1/2} $')
 ax.set_ylabel('PDF')
 ax.grid()
 

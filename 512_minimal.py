@@ -44,8 +44,11 @@ param=dic2struc(**{
 #Also produces the ESS fit from which 1b is obtained
 exec(open('512_plotPDF_K62.py').read())
 
+figs1a.savefig(join('Figs','1a.png'))
+figs1b.savefig(join('Figs','1b.png'))
+
 #%% Fig 2 : PDF of multipliers
-LAMBDA=32
+LAMBDA=2
 #Sets the ratio beween the multipliers l2=l1/LAMBDA in Eq (1.2)
 #Can be  1/32,1/16,1/8,1/4,1/2,2,4,8,16,32,64, 128, 256,512 for the settings (i),(ii),(iii) of the rescaling parameter
 #Lambda =4 and 16 correpsonds to Fig 2
@@ -53,8 +56,8 @@ LAMBDA=32
 CENTERING=False
 #centers or not the PDF
 
-INERTIALRANGE=(6,500)
+INERTIALRANGE=(6,11500)
 #Sets range of data to display based on the quantity min(ELL) (in units of eta)
 
 exec(open('512_plotPDF_multipliers.py').read())
-
+fig.savefig(join('Figs','512_mul_%0.2f.png' %(LAMBDA,)))
