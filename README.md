@@ -9,6 +9,8 @@ with current identifiers
 - Philosophical Transactions A RSTA-2021-0098
     
 - ArXiV https://arxiv.org/submit/3752236
+
+[![DOI](https://zenodo.org/badge/369326157.svg)](https://zenodo.org/badge/latestdoi/369326157)
 ***
 
 
